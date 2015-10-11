@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:zcml="http://namespaces.zope.org/zcml">
+
+
+    <!-- Includes: Browser Configuration -->
+    <include package=".browser"/>
+   
+    <adapter
+        provides=".interfaces.IIBM7000DeviceInfo"
+        for=".IBMV7000Device.IBMV7000Device"
+        factory=".info.IBM7000DeviceInfo"
+    />
+
+    <adapter
+    	provides=".interfaces.IEnclosureInfo"
+    	for=".Enclosure.Enclosure"
+    	factory=".info.EnclosureInfo"
+    />
+
+    <adapter
+    	provides=".interfaces.IBatteryInfo"
+    	for=".Battery.Battery"
+    	factory=".info.BatteryInfo"
+    />
+
+    <adapter
+    	provides=".interfaces.IDriveInfo"
+    	for=".Drive.Drive"
+    	factory=".info.DriveInfo"
+    />
+
+</configure>
+
