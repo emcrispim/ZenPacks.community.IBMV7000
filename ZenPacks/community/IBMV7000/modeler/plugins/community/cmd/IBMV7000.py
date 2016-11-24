@@ -55,7 +55,7 @@ class IBMV7000(CommandPlugin):
 
     maps.append(self.objectMap({
            'total_mdisk_capacity' : total_mdisk_capacity,
-           'total_used_capacity'  : total_mdisk_capacity }))
+           'total_used_capacity'  : total_used_capacity }))
 
 
     # parsing data for lsdrive command
