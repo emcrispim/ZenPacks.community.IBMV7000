@@ -33,7 +33,7 @@ True
 3
 </property>
 <property type="string" id="commandTemplate" mode="w" >
-lseventlog -message no -fixed no -delim :
+lseventlog -message no -monitoring yes -fixed no -delim :
 </property>
 <property type="int" id="cycletime" mode="w" >
 300
@@ -724,5 +724,8 @@ ZenPacks.community.IBMV7000.parsers.parserDrive
 </tomanycont>
 </object>
 </tomanycont>
+</object>
+<!-- ('', 'zport', 'dmd', 'Events', 'Cmd', 'Fail') -->
+<object id='/zport/dmd/Events/Cmd/Fail' module='Products.ZenEvents.EventClass' class='EventClass'>
 </object>
 </objects>
