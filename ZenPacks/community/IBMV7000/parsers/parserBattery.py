@@ -33,8 +33,10 @@ class parserBattery(CommandParser):
 
     
     # recondition_needed raise event
-    if rresult['recondition_needed']!='no': 
+    if rresult['recondition_needed']!='no':
+      cmd.severity = 2
       result.events.append(Utils.getEvent(cmd,"Battery recondition needed",clear=False))
+      cmd.severity = 3
 
     #Battery end of life warning raise event
     if rresult['end_of_life_warning']!='no': 
